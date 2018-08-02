@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="C++,多维数组,数组,下标," />
+  <meta name="keywords" content="C++,多维数组,数组," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="多维数组的下标引用可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。 如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组： 123//用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];int (">
-<meta name="keywords" content="C++,多维数组,数组,下标">
+<meta name="description" content="怎么说呢？在JuicyMio同学和搜索引擎的帮助下，我建了一个基于GitHub的博客，以后······可以和大家多多交流膜拜话不多说，文笔不好我就来谈谈C++中的多维数组的初始化。 多维数组严格的说，C++语言中并没有多维数组，通常所说的多维数组其实是数组的数组。当一个数组的元素也是数组时，通常使用两个维度定义它：一个维度表示数组本身大小，另外一个维度表示其元素（也是数组）大小：1234int i">
+<meta name="keywords" content="C++,多维数组,数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多维数组的下标引用">
-<meta property="og:url" content="https://lkx1945.github.io/2018/08/02/多维数组的下标引用/index.html">
+<meta property="og:title" content="多维数组的初始化">
+<meta property="og:url" content="https://lkx1945.github.io/2018/08/01/duoweishuzudechushihua/index.html">
 <meta property="og:site_name" content="LKX&#39;s Blog">
-<meta property="og:description" content="多维数组的下标引用可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。 如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组： 123//用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];int (">
+<meta property="og:description" content="怎么说呢？在JuicyMio同学和搜索引擎的帮助下，我建了一个基于GitHub的博客，以后······可以和大家多多交流膜拜话不多说，文笔不好我就来谈谈C++中的多维数组的初始化。 多维数组严格的说，C++语言中并没有多维数组，通常所说的多维数组其实是数组的数组。当一个数组的元素也是数组时，通常使用两个维度定义它：一个维度表示数组本身大小，另外一个维度表示其元素（也是数组）大小：1234int i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T06:12:30.859Z">
+<meta property="og:updated_time" content="2018-08-02T06:12:13.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多维数组的下标引用">
-<meta name="twitter:description" content="多维数组的下标引用可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。 如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组： 123//用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];int (">
+<meta name="twitter:title" content="多维数组的初始化">
+<meta name="twitter:description" content="怎么说呢？在JuicyMio同学和搜索引擎的帮助下，我建了一个基于GitHub的博客，以后······可以和大家多多交流膜拜话不多说，文笔不好我就来谈谈C++中的多维数组的初始化。 多维数组严格的说，C++语言中并没有多维数组，通常所说的多维数组其实是数组的数组。当一个数组的元素也是数组时，通常使用两个维度定义它：一个维度表示数组本身大小，另外一个维度表示其元素（也是数组）大小：1234int i">
 
 
 
@@ -137,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://lkx1945.github.io/2018/08/02/多维数组的下标引用/"/>
+  <link rel="canonical" href="https://lkx1945.github.io/2018/08/01/duoweishuzudechushihua/"/>
 
 
 
 
 
-  <title>多维数组的下标引用 | LKX's Blog</title>
+  <title>多维数组的初始化 | LKX's Blog</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lkx1945.github.io/2018/08/02/多维数组的下标引用/">
+    <link itemprop="mainEntityOfPage" href="https://lkx1945.github.io/2018/08/01/duoweishuzudechushihua/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LKX">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">多维数组的下标引用</h1>
+          <h1 class="post-title" itemprop="name headline">多维数组的初始化</h1>
         
 
         <div class="post-meta">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-02T14:12:34+08:00">
-                2018-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T15:54:47+08:00">
+                2018-08-01
               </time>
             
 
@@ -394,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/02/多维数组的下标引用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/02/多维数组的下标引用/" itemprop="commentsCount"></span>
+                <a href="/2018/08/01/duoweishuzudechushihua/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/01/duoweishuzudechushihua/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -403,7 +403,7 @@
 
           
           
-             <span id="/2018/08/02/多维数组的下标引用/" class="leancloud_visitors" data-flag-title="多维数组的下标引用">
+             <span id="/2018/08/01/duoweishuzudechushihua/" class="leancloud_visitors" data-flag-title="多维数组的初始化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  589 字
+                  521 字
                 </span>
               
 
@@ -465,11 +465,14 @@
       
 
       
-        <h3 id="多维数组的下标引用"><a href="#多维数组的下标引用" class="headerlink" title="多维数组的下标引用"></a>多维数组的下标引用</h3><pre><code>可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。
-如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：
-</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用arr的首元素为ia最后一行的最后一个元素赋值</span></span><br><span class="line"><span class="keyword">int</span> ia[<span class="number">2</span>][<span class="number">3</span>] = arr[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line"><span class="keyword">int</span> (&amp;row)[<span class="number">4</span>] = ia[<span class="number">1</span>]; <span class="comment">//把row绑定到ia的第二个4元素数组上</span></span><br></pre></td></tr></table></figure>
-<p>在第一个例子中，表达式提供的下标运算符数量都和它们各自的维度相同。在等号左侧，ia[2]得到数组ia的最后一行，此时返回的是表示ia最后一行的那个一维数组而非任何实际元素；对这个一维数组再取下标，得到编号为[3]的元素，也就是这一行的最后一个元素。<br>    类似的，等号右侧的运算对象包含3个维度。首先通过索引0得到最外层的数组，它是一个大小为20的（多维）数组；接着获取这20个元素数组的第一个元素，得到一个大小为30的一维数组；最后再取出其中的第一个元素。<br>    在第二个例子中，把row定义成一个含有4个整数的数组的引用，然后将其绑定到ia的第2行。<br>    再举一个例子，程序中经常会用到两层嵌套的for循环来处理多维数组的元素：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">constexper <span class="keyword">size_t</span> roeCnt = <span class="number">3</span>, colCnt = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> ia[rowCnt][colCnt]; <span class="comment">//12个未初始化的元素</span></span><br><span class="line"><span class="comment">// 对于每一行</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i != rowCnt; ++i) &#123;</span><br><span class="line">    <span class="comment">// 对于行内的每一列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> j = <span class="number">0</span>; j != colCnt; ++j) &#123;</span><br><span class="line">        <span class="comment">// 将元素的位置索引作为它的值</span></span><br><span class="line">        ia[i][j] = i * colCnt + j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>外层的for循环遍历ia的所有元素，注意这里的元素是一维数组；内层的for循环则遍历那些一维数组的整数元素。此例中，我们将元素的值设为该元素在整个数组中的序号。</p>
+        <p>怎么说呢？在<a href="https://juicymio.github.io/" target="_blank" rel="noopener">JuicyMio</a>同学<del>和搜索引擎</del>的帮助下，我建了一个基于GitHub的博客，以后······可以和大家多多交流<del>膜拜</del>话不多说，<del>文笔不好</del>我就来谈谈C++中的<strong>多维数组的初始化</strong>。</p>
+<h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><h3 id="严格的说，C-语言中并没有多维数组，通常所说的多维数组其实是数组的数组。"><a href="#严格的说，C-语言中并没有多维数组，通常所说的多维数组其实是数组的数组。" class="headerlink" title="严格的说，C++语言中并没有多维数组，通常所说的多维数组其实是数组的数组。"></a>严格的说，C++语言中并没有多维数组，通常所说的多维数组其实是数组的数组。</h3><p>当一个数组的元素也是数组时，通常使用两个维度定义它：一个维度表示数组本身大小，另外一个维度表示其元素（也是数组）大小：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> ia[<span class="number">3</span>][<span class="number">4</span>]; <span class="comment">//大小为3的数组，每个元素含有4个整数的数组</span></span><br><span class="line"><span class="comment">//大小为10的数组，它的每个元素都是大小为20的数组，</span></span><br><span class="line"><span class="comment">//这些数组的元素是含有30个整数的数组</span></span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>][<span class="number">20</span>][<span class="number">30</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">//将所有元素初始化为0</span></span><br></pre></td></tr></table></figure></p>
+<p>按照由内而外的顺序阅读此类定义有助于更好地理解其真实含义。</p>
+<h3 id="多维数组的初始化"><a href="#多维数组的初始化" class="headerlink" title="多维数组的初始化"></a>多维数组的初始化</h3><p>允许用花括号括起来的一组值初始化多维数组。下面的初始化形式中，多维数组的每一行分别用花括号括了起来：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myArray [<span class="number">3</span>][<span class="number">4</span>] = &#123;</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">    &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;</span><br><span class="line">    &#123;<span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>等价于：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//没有标识每行的花括号</span></span><br><span class="line"><span class="keyword">int</span> myArray [<span class="number">3</span>][<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>并非所有元素的都必须包含在初始化列表之内。如果仅仅是想初始化每行的第一个元素，可以：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显式地初始化每行的首元素</span></span><br><span class="line"><span class="keyword">int</span> myArray[<span class="number">3</span>][<span class="number">4</span>] = &#123;&#123; <span class="number">0</span> &#125;, &#123; <span class="number">4</span> &#125;, &#123; <span class="number">8</span> &#125;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>其他未列出的元素执行默认值初始化。如果省略掉内层的花括号，结果就大不一样了：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显式初始化第一行，其他元素执行默认值初始化</span></span><br><span class="line"><span class="keyword">int</span> myArray1[<span class="number">3</span>][<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">9</span>&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>它初始化的是第一行的4个元素，其他元素被初始化为0。</p>
 
       
     </div>
@@ -493,8 +496,6 @@
           
             <a href="/tags/数组/" rel="tag"><i class="fa fa-tag"></i> 数组</a>
           
-            <a href="/tags/下标/" rel="tag"><i class="fa fa-tag"></i> 下标</a>
-          
         </div>
       
 
@@ -506,15 +507,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/01/多维数组的初始化/" rel="next" title="多维数组的初始化">
-                <i class="fa fa-chevron-left"></i> 多维数组的初始化
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/02/duoweishuzudexiabiaoyinyong/" rel="prev" title="多维数组的下标引用">
+                多维数组的下标引用 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -673,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组的下标引用"><span class="nav-number">1.</span> <span class="nav-text">多维数组的下标引用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多维数组"><span class="nav-number">1.</span> <span class="nav-text">多维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#严格的说，C-语言中并没有多维数组，通常所说的多维数组其实是数组的数组。"><span class="nav-number">1.1.</span> <span class="nav-text">严格的说，C++语言中并没有多维数组，通常所说的多维数组其实是数组的数组。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组的初始化"><span class="nav-number">1.2.</span> <span class="nav-text">多维数组的初始化</span></a></li></ol></li></ol></div>
             
 
           </div>
