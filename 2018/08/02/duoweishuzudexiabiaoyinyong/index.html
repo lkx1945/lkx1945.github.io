@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="多维数组的下标引用  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：123//用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];int">
+<meta name="description" content="多维数组的下标引用  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：123// 用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];in">
 <meta name="keywords" content="C++,多维数组,数组,下标">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多维数组的下标引用">
 <meta property="og:url" content="https://lkx1945.github.io/2018/08/02/duoweishuzudexiabiaoyinyong/index.html">
 <meta property="og:site_name" content="LKX&#39;s Blog">
-<meta property="og:description" content="多维数组的下标引用  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：123//用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];int">
+<meta property="og:description" content="多维数组的下标引用  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：123// 用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];in">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T06:23:38.734Z">
+<meta property="og:updated_time" content="2018-08-02T08:08:58.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多维数组的下标引用">
-<meta name="twitter:description" content="多维数组的下标引用  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：123//用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];int">
+<meta name="twitter:description" content="多维数组的下标引用  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：123// 用arr的首元素为ia最后一行的最后一个元素赋值int ia[2][3] = arr[0][0][0];in">
 
 
 
@@ -465,8 +465,8 @@
       
 
       
-        <h3 id="多维数组的下标引用"><a href="#多维数组的下标引用" class="headerlink" title="多维数组的下标引用"></a>多维数组的下标引用</h3><p>  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。<br>  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用arr的首元素为ia最后一行的最后一个元素赋值</span></span><br><span class="line"><span class="keyword">int</span> ia[<span class="number">2</span>][<span class="number">3</span>] = arr[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line"><span class="keyword">int</span> (&amp;row)[<span class="number">4</span>] = ia[<span class="number">1</span>]; <span class="comment">//把row绑定到ia的第二个4元素数组上</span></span><br></pre></td></tr></table></figure></p>
-<p>在第一个例子中，表达式提供的下标运算符数量都和它们各自的维度相同。在等号左侧，ia[2]得到数组ia的最后一行，此时返回的是表示ia最后一行的那个一维数组而非任何实际元素；对这个一维数组再取下标，得到编号为[3]的元素，也就是这一行的最后一个元素。<br>    类似的，等号右侧的运算对象包含3个维度。首先通过索引0得到最外层的数组，它是一个大小为20的（多维）数组；接着获取这20个元素数组的第一个元素，得到一个大小为30的一维数组；最后再取出其中的第一个元素。<br>    在第二个例子中，把row定义成一个含有4个整数的数组的引用，然后将其绑定到ia的第2行。<br>    再举一个例子，程序中经常会用到两层嵌套的for循环来处理多维数组的元素：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">constexper <span class="keyword">size_t</span> roeCnt = <span class="number">3</span>, colCnt = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> ia[rowCnt][colCnt]; <span class="comment">//12个未初始化的元素</span></span><br><span class="line"><span class="comment">// 对于每一行</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i != rowCnt; ++i) &#123;</span><br><span class="line">    <span class="comment">// 对于行内的每一列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> j = <span class="number">0</span>; j != colCnt; ++j) &#123;</span><br><span class="line">        <span class="comment">// 将元素的位置索引作为它的值</span></span><br><span class="line">        ia[i][j] = i * colCnt + j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="多维数组的下标引用"><a href="#多维数组的下标引用" class="headerlink" title="多维数组的下标引用"></a>多维数组的下标引用</h3><p>  可以用下标运算符访问多维数组的元素，此时数组的每个维度对应一个下标运算符。<br>  如果表达式含有的下标运算符数量和数组的维度一样多，该表达式的结果将是给定类型的元素；反之，如果表达式含有的下标运算符数量比数组的维度小，则表达式的结果将是给定索引处的一个内层数组：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用arr的首元素为ia最后一行的最后一个元素赋值</span></span><br><span class="line"><span class="keyword">int</span> ia[<span class="number">2</span>][<span class="number">3</span>] = arr[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line"><span class="keyword">int</span> (&amp;row)[<span class="number">4</span>] = ia[<span class="number">1</span>]; <span class="comment">// 把row绑定到ia的第二个4元素数组上</span></span><br></pre></td></tr></table></figure></p>
+<p>在第一个例子中，表达式提供的下标运算符数量都和它们各自的维度相同。在等号左侧，ia[2]得到数组ia的最后一行，此时返回的是表示ia最后一行的那个一维数组而非任何实际元素；对这个一维数组再取下标，得到编号为[3]的元素，也就是这一行的最后一个元素。<br>    类似的，等号右侧的运算对象包含3个维度。首先通过索引0得到最外层的数组，它是一个大小为20的（多维）数组；接着获取这20个元素数组的第一个元素，得到一个大小为30的一维数组；最后再取出其中的第一个元素。<br>    在第二个例子中，把row定义成一个含有4个整数的数组的引用，然后将其绑定到ia的第2行。<br>    再举一个例子，程序中经常会用到两层嵌套的for循环来处理多维数组的元素：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">constexper <span class="keyword">size_t</span> rowCnt = <span class="number">3</span>, colCnt = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> ia[rowCnt][colCnt]; <span class="comment">//12个未初始化的元素</span></span><br><span class="line"><span class="comment">// 对于每一行</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i != rowCnt; ++i) &#123;</span><br><span class="line">    <span class="comment">// 对于行内的每一列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> j = <span class="number">0</span>; j != colCnt; ++j) &#123;</span><br><span class="line">        <span class="comment">// 将元素的位置索引作为它的值</span></span><br><span class="line">        ia[i][j] = i * colCnt + j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>外层的for循环遍历ia的所有元素，注意这里的元素是一维数组；内层的for循环则遍历那些一维数组的整数元素。此例中，我们将元素的值设为该元素在整个数组中的序号。</p>
 
       
@@ -513,6 +513,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/02/shiyongfanweiforyujuchuliduoweishuzu/" rel="prev" title="多维数组的下标引用">
+                多维数组的下标引用 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -600,7 +604,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -642,7 +646,7 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="kangk3450@gmail.com" target="_blank" title="E-Mail">
+                    <a href="mailto:kangk3450@gmail.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
