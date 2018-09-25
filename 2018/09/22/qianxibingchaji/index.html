@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="LKX&#39;s Blog">
 <meta property="og:description" content="这次是真的”浅析”并查集，顾名思义是合并/查找集(Union Find)，主要操作为合并与查找。 ###简介###一个不相交集合数据结构维护了一个不相交动态集合。我们用一个代表来作为某个集合的标志，它也是这个集合的某个成员。 ###实现###我们希望实现以下功能：make_set()————初始化只有一个节点的一棵树，根包含了集合的代表，而且它是自己的父节点。find_set()————沿着指向父">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T05:38:23.997Z">
+<meta property="og:updated_time" content="2018-09-25T05:50:42.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析并查集">
 <meta name="twitter:description" content="这次是真的”浅析”并查集，顾名思义是合并/查找集(Union Find)，主要操作为合并与查找。 ###简介###一个不相交集合数据结构维护了一个不相交动态集合。我们用一个代表来作为某个集合的标志，它也是这个集合的某个成员。 ###实现###我们希望实现以下功能：make_set()————初始化只有一个节点的一棵树，根包含了集合的代表，而且它是自己的父节点。find_set()————沿着指向父">
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  576 字
+                  558 字
                 </span>
               
 
@@ -468,7 +468,7 @@
         <p><del>这次是真的”浅析”</del><br>并查集，顾名思义是合并/查找集(Union Find)，主要操作为合并与查找。</p>
 <p>###简介###<br>一个<strong>不相交集合数据结构</strong>维护了一个不相交动态集合。我们用一个<strong>代表</strong>来作为某个集合的标志，它也是这个集合的某个成员。</p>
 <p>###实现###<br>我们希望实现以下功能：<br>make_set()————初始化只有一个节点的一棵树，根包含了集合的代表，而且它是自己的父节点。<br>find_set()————沿着指向父节点的指针寻找树的根。这个过程中所访问的节点构成了<strong>查找路径</strong>(find path)。<br>union()————合并两棵树，使得一棵树的根指向另一棵树的根。</p>
-<p>###优化###<br>有两种<strong>启发式策略</strong>可以大大改善时间复杂度。<del>启发式策略听起来很高大上但实际就那么回事</del><br>第一种启发式策略是<strong>按秩合并</strong>(union by rank)，就是将较少节点的树的根指向较多节点的树的根。我们无需记录根的子树的大小，而是维护一个<strong>秩</strong>，它表示该节点高度的上界。在使用按秩合并的union()中，我们可以将有较小的秩的根指向较大的秩的根，相当于。<del>秩是什么？本蒟蒻理解为大概是集合节点数目的上界</del><br>第二种启发式策略是<strong>路径压缩</strong>(path compression)，也很有效。这种策略可以使查找路径中的每个节点直接指向根。<strong>路径压缩不会改变任何节点的秩</strong>。</p>
+<p>###优化###<br>有两种<strong>启发式策略</strong>可以大大改善时间复杂度。<del>启发式策略听起来很高大上但实际就那么回事</del><br>第一种启发式策略是<strong>按秩合并</strong>(union by rank)，就是将较少节点的树的根指向较多节点的树的根。我们无需记录根的子树的大小，而是维护一个<strong>秩</strong>，它表示该节点高度的上界。在使用按秩合并的union()中，我们可以将有较小的秩的根指向较大的秩的根，相当于。<del>秩是什么？</del><br>第二种启发式策略是<strong>路径压缩</strong>(path compression)，也很有效。这种策略可以使查找路径中的每个节点直接指向根。<strong>路径压缩不会改变任何节点的秩</strong>。</p>
 <p>###实现###<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> size[N];<span class="comment">//记录子树的大小</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">unionSet</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span><span class="comment">//x与y所在集合合并</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x = find(x);</span><br><span class="line">    y = find(y);</span><br><span class="line">    <span class="keyword">if</span>(x == y)<span class="comment">//原本就在一个集合里就不管了</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">    fa[x] = y;<span class="comment">//把x的根节点变成y的根节点的子节点</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">unionSet</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> xx = find(x),yy = find(y);</span><br><span class="line">    <span class="keyword">if</span>(xx == yy)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(size[xx] &gt; size[yy])<span class="comment">//保证小的合到大的里</span></span><br><span class="line">        swap(xx,yy);</span><br><span class="line">    fa[xx] = yy;</span><br><span class="line">    size[yy] += size[xx];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>###用途###<br>确定无向图的连通分量<del>这句话好像被说烂</del></p>
 <p>###题目###<br>这个……<br>NOIp 2010 关押罪犯<br>NOIp 2013 火车运输<br>洛谷 P2142, P1090, P1551</p>
